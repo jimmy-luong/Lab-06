@@ -4,7 +4,7 @@ def encode(string):
     password = ""
     for i in string:  # reads through the string and adds 3 to each number
         val = int(i) + 3
-        if val > 10:
+        if val >= 10:
             val -= 10
         password += str(val)
     return password
