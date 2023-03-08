@@ -1,5 +1,6 @@
 # Jimmy Luong
 
+
 def encode(string):
     password = ""
     for i in string:  # reads through the string and adds 3 to each number
