@@ -11,6 +11,16 @@ def encode(string):
     return password
 
 
+def decode(string):
+    password = ''
+    for i in string:
+        val = int(i) - 3
+        if val < 0:
+            val += 10
+        password += str(val)
+    return password
+
+
 while True:
     print("Menu")
     print("-------------")
@@ -26,6 +36,9 @@ while True:
         code = encode(code)
         print("Your password has been encoded and stored!")
         print("")
+    if option == 2:
+        print(f'The encoded password is {code}, and the original password is {decode(code)}.')
+        print()
     elif option == 3:
         break
 
